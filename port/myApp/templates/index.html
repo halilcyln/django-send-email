@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <title>Django send mail</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="{% static '/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'templatemo-first-portfolio-style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container " style="height: 700px;">
+        <div class="row justify-content-center align-content-center h-100 ">
+            <div class="col-lg-6 col-12 mt-5 mt-lg-0">
+                <h5>Django Send Email</h5>
+                <form action="#" method="post" class="custom-form contact-form" role="form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-floating">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+                                <label for="floatingInput">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-floating">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" name="emailmessage" placeholder="Tell me about the project"></textarea>
+                                <label for="floatingTextarea">Tell me about the project</label>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12 ms-auto">
+                            <button type="submit" class="form-control">Send</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
